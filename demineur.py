@@ -10,13 +10,13 @@ def addBombs(grid, nb_bombes, bombe_character):
 			nb_case_bombe += 1
 	return (grid)
 
-def gridGenerator(largeur, longueur, nb_bombes):
+def gridGenerator(largeur, hauteur, nb_bombes):
 	grid = []
 	i = 0
-	for i in range(largeur):
+	for i in range(hauteur):
 		j = 0
 		grid.append([])
-		for j in range(longueur):
+		for j in range(largeur):
 			grid[i].append("0")
 			j += 1
 		i += 1
@@ -25,13 +25,11 @@ def gridGenerator(largeur, longueur, nb_bombes):
 
 def printGrid(grid):
 	i = 0
-	print('-' * (len(grid[i]) * 3 + len(grid) - 3))
 	for i in range(len(grid)):
 		print(' | '.join(grid[i]))
-		print('-' * (len(grid[i]) * 3 + len(grid) - 3))
 		i += 1
 	return
 
-grid = gridGenerator(10, 10, 10)
+grid = gridGenerator(8, 10, 10)
 
 printGrid(grid)
